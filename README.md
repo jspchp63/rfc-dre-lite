@@ -147,6 +147,86 @@ If scale and parameters are your answer, this will look pointless.
 That reaction is part of the test.
 
 
+# demo/demo_coherence_reconstruction.py
+# RFC-DRE Lite — Minimal, Copy-Paste Runnable Demo
+# Purpose: Compare transport-style replay vs resonance-based reconstruction
+# Run: python demo_coherence_reconstruction.py
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(42)
+
+# -----------------------------
+# Helpers
+# -----------------------------
+def coherence_score(phases):
+    """Order parameter (Kuramoto-style) as coherence metric."""
+    return np.abs(np.mean(np.exp(1j * phases)))
+
+def add_noise(phases, sigma):
+    return phases + np.random.normal(0, sigma, size=len(phases))
+
+# -----------------------------
+# Simulation Params
+# -----------------------------
+N = 64               # number of nodes
+T = 60               # time steps
+noise_sigma = 0.35   # noise level
+alpha = 0.15         # local update strength (resonance)
+transport_decay = 0.55  # transport degradation factor
+
+# -----------------------------
+# Initial State
+# -----------------------------
+initial_phases = np.random.uniform(-np.pi, np.pi, N)
+
+# -----------------------------
+# Transport-style Replay
+# (simulate session break + replay with degradation)
+# -----------------------------
+phases_transport = initial_phases.copy()
+transport_scores = []
+
+for t in range(T):
+    phases_transport = add_noise(phases_transport, noise_sigma)
+    phases_transport *= transport_decay  # degradation from reconstruction
+    transport_scores.append(coherence_score(phases_transport))
+
+# -----------------------------
+# Resonance Reconstruction
+# (local phase evolution, no transport)
+# -----------------------------
+phases_resonance = initial_phases.copy()
+resonance_scores = []
+
+for t in range(T):
+    phases_resonance = add_noise(phases_resonance, noise_sigma)
+    # local resonance update: pull toward mean phase
+    mean_phase = np.angle(np.mean(np.exp(1j * phases_resonance)))
+    phases_resonance += alpha * np.sin(mean_phase - phases_resonance)
+    resonance_scores.append(coherence_score(phases_resonance))
+
+# -----------------------------
+# Results
+# -----------------------------
+print("Final Coherence")
+print("----------------")
+print(f"Transport Replay : {transport_scores[-1]:.4f}")
+print(f"Resonance Rebuild: {resonance_scores[-1]:.4f}")
+
+# -----------------------------
+# Plot
+# -----------------------------
+plt.figure(figsize=(8, 4))
+plt.plot(transport_scores, label="Transport Replay", linestyle="--")
+plt.plot(resonance_scores, label="Resonance Reconstruction")
+plt.xlabel("Time Step")
+plt.ylabel("Coherence (Order Parameter)")
+plt.title("RFC-DRE Lite — Coherence Under Noise")
+plt.legend()
+plt.tight_layout()
+plt.show()
 
 
 
