@@ -56,10 +56,12 @@ If you are looking for features or performance numbers — **stop here**.
 
 ## QUICK START (COPY–PASTE)
 
-```bash
 git clone https://github.com/yourname/rfc-dre-lite.git
 cd rfc-dre-lite
 python demo/demo_coherence_reconstruction.py
+
+---
+
 ## Expected Output
 
 - Coherence score
@@ -70,21 +72,21 @@ python demo/demo_coherence_reconstruction.py
 
 ## Metrics (Visible, Not Claimed)
 
-These metrics are **illustrative**, not benchmarks.
+These metrics are illustrative, not benchmarks.
 
-- **Coherence Index (CI)**
-- **Pattern Overlap Ratio (POR)**
-- **Drift vs Recovery Delta**
+- Coherence Index (CI)
+- Pattern Overlap Ratio (POR)
+- Drift vs Recovery Delta
 
 ---
 
 ## Relation to RCIRCUIT
 
-- **RCIRCUIT**: transport-free phase compute (theory + simulation)
-- **RFC-DRE Lite**: coherence reconstruction demo (software-level)
+- RCIRCUIT: transport-free phase compute (theory + simulation)
+- RFC-DRE Lite: coherence reconstruction demo (software-level)
 
-RFC-DRE Lite does **not** prove RCIRCUIT.  
-It demonstrates a **compatible failure–recovery principle**.
+RFC-DRE Lite does not prove RCIRCUIT.
+It demonstrates a compatible failure–recovery principle.
 
 ---
 
@@ -92,12 +94,12 @@ It demonstrates a **compatible failure–recovery principle**.
 
 Modern AI systems fail coherence because:
 
-- Context is **moved**
-- State is **serialized**
-- Meaning is **reconstructed via transport**
+- Context is moved
+- State is serialized
+- Meaning is reconstructed via transport
 
-This demo shows a **different direction**:  
-coherence via **local pattern resonance**, not recall.
+This demo shows a different direction:
+coherence via local pattern resonance, not recall.
 
 ---
 
@@ -113,14 +115,14 @@ coherence via **local pattern resonance**, not recall.
 
 ## License
 
-Research / evaluation only.  
+Research / evaluation only.
 No commercial use without permission.
 
 ---
 
 ## Author
 
-Chulhee Park  
+Chulhee Park
 Concept: Transport-free coherence & resonance reconstruction
 
 
