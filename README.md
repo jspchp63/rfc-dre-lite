@@ -1,56 +1,93 @@
-# RFC-DRE Lite — Minimal Coherence Recovery Demo
+# RFC-DRE Lite — Coherence-First Session Reconstruction (Demo / Alpha)
 
-> **Purpose**
->  
-> Show, with executable code, that **context / coherence can be partially restored
-> without transport-based memory**, using resonance-style reconstruction.
->  
-> This is **not** HROS-6, **not** a full OS, and **not** a product claim.  
-> It is a **minimal, falsifiable demo**.
+**RFC-DRE Lite** is a minimal, executable demonstration of **coherence-first reasoning**:  
+it reconstructs *context continuity* across sessions **without transporting full state**.
+
+This repository is **not** an AGI claim, **not** a memory product, and **not** a production SDK.  
+It is a **falsifiable demo** that shows how *local resonance patterns* preserve coherence better than transport-heavy context replay.
 
 ---
 
-## What this repository is
+## What Problem This Tests (One Question Only)
 
-RFC-DRE Lite is a **research-grade demo** that implements:
+> **Does conversational and reasoning coherence fail because intelligence is insufficient,  
+> or because meaning is forced to move and be reconstructed across sessions?**
 
-- Local signal / state encoding
-- Resonance-based similarity reconstruction
-- Cross-session coherence recovery (pattern-based, not memory replay)
-- Observable difference vs naïve stateless restart
+**Claim (to be tested):**  
+Transport-based context reconstruction collapses coherence.  
+Pattern-based resonance reconstruction preserves it longer.
 
-This repo exists to answer **one practical question**:
-
-> Can coherence be partially recovered **without transporting full state**?
+If this is false, this repo should fail visibly.
 
 ---
 
-## What this repository is NOT
+## What RFC-DRE Lite Is
 
-- ❌ Not a full RFC-DRE engine  
-- ❌ Not HROS-6  
-- ❌ Not a commercial SDK  
-- ❌ Not long-term memory  
-- ❌ Not an LLM replacement  
+- A **Python-based demo engine**
+- Focused on **cross-session coherence**, not memory storage
+- Reconstructs *intent, emotional trajectory, and logical direction* from **patterns**
+- Explicitly **does not store conversation history**
 
-If you are looking for a finished product, stop here.
+Think: **coherence recovery**, not memory.
 
 ---
 
-## Demo Overview (What you can actually see)
+## What This Is NOT
 
-The demo shows **three phases**:
+- ❌ Not an LLM
+- ❌ Not a chat app
+- ❌ Not a vector DB wrapper
+- ❌ Not a LangChain / LangGraph alternative
+- ❌ Not production-ready software
+- ❌ Not an OS
 
-1. **Session A**
-   - Input sequence produces an internal resonance profile
-2. **Session Break**
-   - No stored conversation, no replay
-3. **Session B**
-   - New input reconstructs prior coherence pattern
-   - Output differs from stateless baseline
+This is a **structural probe**, not a product.
 
-Key point:  
-**Reconstruction ≠ memory storage**
+---
+
+## Core Concepts (Lite Version)
+
+- **Resonance Vector**: compressed representation of intent + affect + logic
+- **Session Break**: explicit termination (simulates real reset)
+- **Re-entry**: coherence reconstructed from resonance, not history
+- **Stability Metric**: measures continuity vs collapse
+
+No retrieval. No replay. No summarization.
+
+---
+
+## Demo: What You Can Observe
+
+The demo shows:
+
+1. Session A: user intent & emotional direction established  
+2. Session ends (state destroyed)
+3. Session B: engine reconstructs *directional coherence*
+4. Comparison against transport-style reset (baseline collapse)
+
+You should see:
+- Less re-explanation
+- Preserved trajectory
+- Lower semantic drift
+
+If you don’t, the claim fails.
+
+---
+
+## Repository Structure
+
+rfc-dre-lite/
+├─ demo/
+│ └─ demo_coherence_reconstruction.py
+├─ src/
+│ ├─ resonance_vector.py
+│ ├─ coherence_metric.py
+│ └─ session_rebuilder.py
+├─ README.md
+└─ LICENSE
+
+yaml
+코드 복사
 
 ---
 
@@ -59,65 +96,60 @@ Key point:
 ```bash
 git clone https://github.com/yourname/rfc-dre-lite.git
 cd rfc-dre-lite
-python demo/demo_rfc_dre_lite.py
-Expected output:
+python demo/demo_coherence_reconstruction.py
+Output is textual + simple plots.
+No external APIs required.
 
-Coherence score
+Evaluation Criteria (Pass / Fail)
+This demo fails if any of the following is true:
 
-Baseline vs reconstructed divergence
+Transport-style replay preserves coherence better
 
-Simple plot or printed metric
+Noise degrades resonance reconstruction faster than transport
 
-Metrics (Visible, Not Claimed)
+Reconstructed sessions show no measurable continuity advantage
 
-Coherence Index (CI)
+If you can demonstrate that, this repo disproves itself.
 
-Pattern Overlap Ratio (POR)
+Intended Audience
+AI system architects
 
-Drift vs Recovery delta
+Researchers studying context, memory, and continuity
 
-These are illustrative, not benchmarks.
+Engineers investigating limits of LLM session design
 
-Relation to RCIRCUIT
-
-RCIRCUIT: transport-free phase compute (theory + simulation)
-
-RFC-DRE Lite: coherence reconstruction demo (software-level)
-
-RFC-DRE Lite does not prove RCIRCUIT.
-It demonstrates a compatible failure-recovery principle.
-
-Why this matters
-
-Modern AI systems fail coherence because:
-
-Context is moved
-
-State is serialized
-
-Meaning is reconstructed via transport
-
-This demo shows a different direction:
-coherence via local pattern resonance, not recall.
+If you are looking for features, UX, or SOTA benchmarks — stop here.
 
 Status
+Code: Alpha / Demo-level
 
-Research demo
+Scope: Minimal by design
 
-Alpha quality
+Commercial Use: ❌ Not licensed
 
-Single-file runnable
+Purpose: Structural falsification
 
-No guarantees
+Relationship to RCIRCUIT / HROS
+RFC-DRE Lite = executable demo
 
-No commercial license
+RCIRCUIT = transport-free compute research
 
-License
+HROS = conceptual OS layer (not implemented here)
 
-Research / evaluation only.
-No commercial use without permission.
+This repo stands alone.
 
-Author
+Final Note
+This repository is intentionally uncomfortable.
 
-Chulhee Park
-Concept: Transport-free coherence & resonance reconstruction# rfc-dre-lite
+If coherence matters, continue.
+If scale and parameters are your answer, this will look pointless.
+
+That reaction is part of the test.
+
+
+
+
+
+
+
+
