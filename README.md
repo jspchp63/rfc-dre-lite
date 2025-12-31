@@ -1,3 +1,66 @@
+# RFC-DRE Lite — Coherence Reconstruction Demo (Alpha)
+
+> **Executable falsification demo**  
+> Transport-style replay vs resonance-based reconstruction  
+> Minimal by design. Uncomfortable by intent.
+
+---
+
+## ONE QUESTION (READ THIS FIRST)
+
+This repository asks **one falsifiable question**:
+
+**Does coherence across sessions fail because of insufficient intelligence,  
+or because meaning is transported and reconstructed instead of locally re-evolved?**
+
+**Claim (to be falsified):**  
+Transport-style replay degrades long-term coherence under noise.  
+Local resonance-based reconstruction preserves coherence longer.
+
+This repository exists **only** to test that claim.
+
+---
+
+## WHAT THIS IS
+
+RFC-DRE Lite is a **minimal executable demo** that compares two strategies:
+
+1. **Transport Replay**
+   - Session breaks
+   - State is replayed / reconstructed
+   - Noise accumulates
+   - Coherence decays
+
+2. **Resonance Reconstruction**
+   - No state transport
+   - Local phase evolution
+   - Coherence re-emerges under noise
+
+This is **not** a product, SDK, benchmark, or feature showcase.  
+It is a **structural falsification probe**.
+
+---
+
+## WHAT THIS IS NOT
+
+- ❌ Not HROS (conceptual OS layer)
+- ❌ Not RCIRCUIT (transport-free compute engine)
+- ❌ Not AGI
+- ❌ Not a chatbot feature
+- ❌ Not UX polish
+- ❌ Not SOTA benchmarking
+
+If you are looking for features or performance numbers — **stop here**.
+
+---
+
+## QUICK START (COPY–PASTE)
+
+```bash
+git clone https://github.com/yourname/rfc-dre-lite.git
+cd rfc-dre-lite
+python demo/demo_coherence_reconstruction.py
+
 # RFC-DRE Lite — Coherence-First Session Reconstruction (Demo / Alpha)
 
 **RFC-DRE Lite** is a minimal, executable demonstration of **coherence-first reasoning**:  
