@@ -56,7 +56,7 @@ If you are looking for features or performance numbers — **stop here**.
 
 ## QUICK START (COPY–PASTE)
 
-git clone https://github.com/yourname/rfc-dre-lite.git
+git clone https://github.com/jspchp63/rfc-dre-lite.git
 cd rfc-dre-lite
 python demo/demo_coherence_reconstruction.py
 
