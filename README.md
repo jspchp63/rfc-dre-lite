@@ -18,7 +18,7 @@ or because meaning is reconstructed via transport instead of locally re-evolving
 
 ---
 
-## CLAIM (TO BE FALSIFIED)
+## CLAIM 
 
 - Transport-style replay degrades long-horizon coherence under noise.
 - Local resonance-based reconstruction preserves coherence longer.
@@ -142,7 +142,7 @@ No commercial use without permission.
 
 **Chulhee Park**  
 Transport-free coherence & resonance reconstruction
-
+jspchp638@gmail.com
 ---
 
 ## FINAL FENCE
