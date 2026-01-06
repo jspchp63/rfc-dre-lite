@@ -1,6 +1,6 @@
-# RFC-DRE Lite — Coherence Reconstruction Demo (Alpha)
+# RFC-DRE Lite — Coherence Reconstruction (Research Scaffold)
 
-> **Executable falsification probe**  
+> **Falsification-oriented research scaffold**  
 > Transport replay vs resonance-based reconstruction  
 > Minimal by design. Uncomfortable by intent.
 
@@ -18,86 +18,100 @@ or because meaning is reconstructed via transport instead of locally re-evolving
 
 ---
 
-## CLAIM 
+## CLAIM (TO BE TESTED)
 
 - Transport-style replay degrades long-horizon coherence under noise.
-- Local resonance-based reconstruction preserves coherence longer.
+- Local resonance-based reconstruction may preserve coherence longer.
 
-If this claim is wrong, **this repository should fail**.
+If this claim is wrong, **this repository should eventually fail**.
 
 ---
 
-## WHAT THIS IS (NO BS)
+## WHAT THIS IS
 
-RFC-DRE Lite is a **minimal executable research demo** comparing two strategies:
+RFC-DRE Lite is a **research scaffold** for testing coherence reconstruction strategies
+*after* structural coherence failure has been established.
 
-### 1. Transport Replay
+It is intended to compare two approaches:
+
+### 1. Transport Replay (Baseline Failure Mode)
 - session breaks
 - state serialization / replay
-- noise accumulation
+- accumulated noise
 - coherence drift
 
-### 2. Resonance Reconstruction
+### 2. Resonance-Based Reconstruction (Hypothesis)
 - no global state transport
-- local phase / pattern re-alignment
+- local pattern / phase re-alignment
 - partial coherence re-emergence under noise
 
-This is **not** a product.  
-This is **not** prompt engineering.  
-This is a **controlled probe into system failure and partial recovery**.
+This repository currently defines the **experimental framing and metrics**,  
+not a finished executable system.
+
+---
+
+## IMPORTANT: CURRENT IMPLEMENTATION STATUS
+
+⚠️ **No executable demo is published in this repository yet.**
+
+- No `demo_coherence_reconstruction.py`
+- No computed CI / POR / Drift metrics
+- No runnable comparison code
+
+This is intentional.
+
+RFC-DRE Lite currently serves as:
+- an **experimental design**
+- a **metric specification**
+- a **research direction placeholder**
+
+Executable evidence for coherence failure exists in the **RCIRCUIT** repository.
 
 ---
 
 ## WHAT THIS IS NOT
 
+- ❌ Not a product
+- ❌ Not an SDK
 - ❌ Not HROS (conceptual OS layer)
 - ❌ Not RCIRCUIT (transport-free compute engine)
 - ❌ Not AGI
 - ❌ Not a chatbot feature
-- ❌ Not UX polish
 - ❌ Not SOTA benchmarking
 
-If you want features, metrics, or demos to impress management — stop here.
-
----
-
-## QUICK START (COPY–PASTE)
-
-git clone https://github.com/jspchp63/rfc-dre-lite.git
-
-cd rfc-dre-lite
-python demo/demo_coherence_reconstruction.py
----
-
-## EXPECTED OUTPUT
-
-- Coherence score
-- Replay vs reconstruction divergence
-- Simple plot or printed metric
-
-These are **visible signals**, not benchmark claims.
-
----
-
-## METRICS (ILLUSTRATIVE)
-
-- Coherence Index (CI)
-- Pattern Overlap Ratio (POR)
-- Drift vs Recovery Delta
-
-Numbers exist to **compare failure modes**, not to sell performance.
+If you want features or performance numbers — stop here.
 
 ---
 
 ## RELATION TO RCIRCUIT (IMPORTANT)
 
-- **RCIRCUIT** explains *why coherence collapses structurally*
-- **RFC-DRE Lite** probes *how much continuity can be recovered anyway*
+- **RCIRCUIT** demonstrates *why coherence collapses structurally*
+  (transport vs local phase evolution, executable demo provided)
+
+- **RFC-DRE Lite** is intended to probe *how much continuity can be reconstructed anyway*
+  at the software / session level.
 
 RFC-DRE Lite **assumes** the coherence failure demonstrated in RCIRCUIT.  
 If RCIRCUIT is wrong, this project should collapse.
 
 That dependency is intentional.
+
+---
+
+## METRICS (PLANNED, NOT IMPLEMENTED)
+
+The following metrics are specified for future experiments:
+
+- **Coherence Index (CI)**  
+  Stability of pattern alignment across session boundaries
+
+- **Pattern Overlap Ratio (POR)**  
+  Degree of local pattern re-emergence vs baseline replay
+
+- **Drift vs Recovery Delta**  
+  Net coherence loss or gain under reconstruction
+
+These metrics exist to **compare failure modes**, not to sell performance.
 
 ---
 
@@ -110,24 +124,24 @@ If you work on:
 - autonomous workflows
 - identity-persistent AI
 
-You are already fighting this problem —  
+You are already encountering coherence failure —  
 whether your roadmap admits it or not.
 
-RFC-DRE Lite does not fix it.  
-It measures **how bad the damage is** and **how much can be recovered**.
+RFC-DRE Lite does not claim to fix this problem.  
+It exists to **measure how bad the damage is**  
+and **whether partial recovery is even possible**.
 
 ---
 
 ## STATUS
 
-- research demo
-- alpha quality
-- single-file runnable
-- unstable metrics
+- research scaffold
+- alpha (pre-demo)
+- metrics specified, not computed
 - no guarantees
 - no promises
 
-If you need certainty, don’t run this.
+If you need certainty, don’t follow this repository.
 
 ---
 
@@ -141,8 +155,9 @@ No commercial use without permission.
 ## AUTHOR
 
 **Chulhee Park**  
-Transport-free coherence & resonance reconstruction
+Transport-free coherence & resonance reconstruction  
 jspchp638@gmail.com
+
 ---
 
 ## FINAL FENCE
