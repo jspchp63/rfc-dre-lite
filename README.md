@@ -50,6 +50,17 @@ not a finished executable system.
 
 ---
 
+⚠️ STATUS NOTICE
+
+This repository currently contains NO executable demo.
+All executable coherence evidence lives in the RCIRCUIT repositories:
+
+- rcircuit-phase-engine
+- HROS-RCIRCUIT-LAB
+
+RFC-DRE Lite documents a reconstruction hypothesis
+based on those results.
+
 ## IMPORTANT: CURRENT IMPLEMENTATION STATUS
 
 ⚠️ **No executable demo is published in this repository yet.**
